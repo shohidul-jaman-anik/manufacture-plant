@@ -1,0 +1,37 @@
+.product-container img {
+    /* height: 220px;
+    width: 300px; */
+    height: 180px;
+    width: 250px;
+
+}
+
+.product-container {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: auto;
+    width: 250px;
+}
+
+.admit-btn {
+    width: 100%;
+    color: rgb(235, 228, 228);
+    background-color: #ff4757;
+    font-weight: 900;
+    
+}
+
+@media only screen and (max-width: 576px) {
+    .product-container img {
+        width: 90%;
+
+    }
+    .product-container h2  {
+        font-size: large;
+    }
+    .product-container h4 {
+        font-size: small;
+    }
+    .product-container p {
+        font-size: x-small;
+    }
+}

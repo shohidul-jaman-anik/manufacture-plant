@@ -1,0 +1,19 @@
+.loginContainer{
+    /* height: 80vh;
+    display: flex; */
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+.login-img{
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .loginContainer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+  }

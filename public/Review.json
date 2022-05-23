@@ -1,0 +1,51 @@
+[
+    {
+      "_id": 1,
+      "picture": "https://i.ibb.co/dpDd0mx/escorts-logo.png",
+      "reviews": "Low price bt best product sell this warehouse. Which has given me confidence.",
+      "name": "Emma",
+      "ratings": 5
+    },
+    {
+      "_id": 2,
+      "picture": "https://i.ibb.co/Hdhryrj/landini-logo.png",
+      "reviews": " Delivery of the product is very fast. In just 24 hours I got my desired product. Thanks ",
+      "name": "Lucie E Forbes",
+      "ratings": 5
+    },
+    {
+      "_id": 3,
+      "picture": "https://i.ibb.co/qRbVgm1/mahindra-logo.png",
+      "reviews": "It would not be wrong to say they are the best wholseller. I am his longtime customr",
+      "name": "Brianna",
+      "ratings": 4.5
+    },
+    {
+      "_id": 4,
+      "picture": "https://i.ibb.co/X3JCbFr/massey-logo.png",
+      "reviews": "If some one return there product they return it too soon. This  is best wholseller i have ever seen.Thank for your awesome services",
+      "name": "Sophia.",
+      "ratings": 5
+    },
+    {
+      "_id": 5,
+      "picture": "https://i.ibb.co/FXFPLcZ/New-Holland-logo.png",
+      "reviews": "A good furniture warehouse .Great service. I agree with the previous positive comments about his care.",
+      "name": "Alvin",
+      "ratings": 4.5
+    },
+    {
+      "_id": 6,
+      "picture": "https://i.ibb.co/bLP55PL/same-logo.png",
+      "reviews": "The quality of the wood is very good. I get exactly the delivery as I see it. Continue like this. Good service",
+      "name": "Michelle ",
+      "ratings": 4
+    },
+    {
+      "_id": 6,
+      "picture": "https://i.ibb.co/850b6Q9/tafe-logo.png",
+      "reviews": "The quality of the wood is very good. I get exactly the delivery as I see it. Continue like this. Good service",
+      "name": "Michelle ",
+      "ratings": 4
+    }
+  ]

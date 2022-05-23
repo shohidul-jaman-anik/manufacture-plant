@@ -1,0 +1,50 @@
+[
+    {
+      "_id": "1",
+      "picture": "https://i.ibb.co/6mYNbWp/product2.jpg",
+      "PPU": 450,
+      "name": "Pipes",
+      "gender": "female",
+      "Description":"Build your strength and get those extra few pounds in before the swimsuit season. Come train under expert personal trainers only at Power Zone."
+    },
+    {
+      "_id": "2",
+      "picture": "https://i.ibb.co/54fvrVz/product3.jpg",
+      "PPU": 500,
+      "name": "Valves",
+      "gender": "male",
+      "Description":"Lose extra weight and get in shape with expert personal trainers and top notch fitness equipments only at Mutants Gym, the best gym in Power Zone."
+    },
+    {
+      "_id": "3",
+      "picture": "https://i.ibb.co/Cmg8pjF/product5.jpg",
+      "PPU": 100,
+      "name": "Flanges",
+      "gender": "male",
+      "Description":"Power Zone helps develop the body's respiratory capabilities, workout with your friends while listening to trendy tune at one of the hottest gyms in Power Zone."
+    },
+    {
+      "_id": "4",
+      "picture": "https://i.ibb.co/MPZg1L5/product4.jpg",
+      "PPU": 150,
+      "name": "Flanges",
+      "gender": "female",
+      "Description":"Work on your abs and core with state-of-the-art equipments specially brought to you by the best gym in Power Zone."
+    },
+    {
+      "_id": "5",
+      "picture": "https://i.ibb.co/6XpZDWr/51-Le-Vcm-Gj9-L-AC-SY355.jpg",
+      "PPU": 100,
+      "name": "Fitings",
+      "gender": "male",
+      "Description":"Train with the best of the best in an intense workout session under the expert guidance of our personal trainers at Power Zone"
+    },
+    {
+      "_id": "6",
+      "picture": "https://i.ibb.co/0tcF8qh/2-500x500.jpg",
+      "PPU": 400,
+      "name": "Round Bars",
+      "gender": "male",
+      "Description":"Yoga is a mind and body practice. Various styles of yoga combine physical postures, breathing techniques, and  relaxation."
+    }
+  ]

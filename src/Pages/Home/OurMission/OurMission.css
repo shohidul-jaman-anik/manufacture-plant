@@ -1,0 +1,14 @@
+.name-style{
+    color: #f3ab37;
+    font-weight: 700;
+}
+.explore-btn{
+    background-color: #f3ab37;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 10px;
+}
+.explore-btn a{
+    text-decoration: none;
+    color: black;
+}

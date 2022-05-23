@@ -1,0 +1,11 @@
+.header-title {
+    color: #ed563b;
+    font-weight: 700;
+}
+
+.header-title:hover {
+    color: white;
+}
+.navStyle{
+    /* z-index: 1; */
+}
