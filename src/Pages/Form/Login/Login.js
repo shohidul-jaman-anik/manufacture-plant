@@ -30,6 +30,7 @@ const Login = () => {
     useEffect(() => {
         if (user) {
             navigate(from, { replace: true });
+            toast.success('Login sucessfully')
         }
     }, [user, from, navigate])
 

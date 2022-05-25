@@ -8,6 +8,7 @@ import './Signup.css'
 import SignUpImg from '../../../Assets/form-illustrator/Sign up-pana.svg'
 import SocialLogin from '../SocialLogin/SocialLogin';
 import useToken from '../../Shared/Hook/useToken/useToken';
+import { toast } from 'react-toastify';
 
 const SignUP = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -27,6 +28,7 @@ const SignUP = () => {
     useEffect(() => {
         if (user) {
             navigate(from, { replace: true });
+            toast.success('SignUp sucessfully')
         }
     }, [token, from, navigate])
 

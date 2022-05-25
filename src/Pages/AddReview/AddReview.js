@@ -23,7 +23,7 @@ const AddReview = () => {
             .then(result => {
                 reset()
                 if (result) {
-                    toast('Comment Add Sucessfully')
+                    toast.success('Comment Add Sucessfully')
                 }
             }
             )
