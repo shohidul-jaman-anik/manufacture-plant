@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import './Signup.css'
 import SignUpImg from '../../../Assets/form-illustrator/Sign up-pana.svg'
 import SocialLogin from '../SocialLogin/SocialLogin';
+import useToken from '../../Shared/Hook/useToken/useToken';
 
 const SignUP = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     const [
         createUserWithEmailAndPassword,
         user,
@@ -20,17 +22,17 @@ const SignUP = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
     let navigate = useNavigate();
 
-    // const [token] = useToken(user)
+    const [token] = useToken(user)
 
-    // useEffect(() => {
-    //     if (user) {
-    //         navigate('/');
-    //     }
-    // }, [user, navigate])
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true });
+        }
+    }, [token,from, navigate])
 
-    if (user) {
-        navigate('/appointment')
-    }
+    // if (user) {
+    //     navigate('/')
+    // }
 
     if (loading || updating) {
         return <Loading></Loading>

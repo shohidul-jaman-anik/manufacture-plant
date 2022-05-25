@@ -9,12 +9,12 @@ const Review = ({ studentReview }) => {
     
     return (
         <div>
-            <div className='review-section shadow-sm'>
+            <div className='review-section shadow-sm '>
                 <div className='student-info '>
                     <img src={studentReview.picture} alt="" />
                     <div className='review-main'>
                         <h4>{studentReview.name}</h4>
-                        <h4 className='fs-6'>Ratings: ⭐⭐⭐⭐⭐</h4>
+                        <h4 className='fs-6'>Ratings:{studentReview.ratings} </h4>
 
                     </div>
                 </div>

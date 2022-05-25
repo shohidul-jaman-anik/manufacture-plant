@@ -27,23 +27,24 @@
     margin: 0px;
 }
 
-.serviceDetail-container h4 {
+.serviceDetail-container h6 {
     margin: 0px;
 }
-.update-btn{
+/* .update-btn{
     background-color: #CAD5E2;
     color: black;
     padding: 10px 19px;
     border-radius: 10px;
     font-weight: 700;
     border: none;
-}
+    width: 100%;
+} */
 /* --------------------------------------------
         Responsive for mobile device
 -------------------------------------------- */
 
 @media only screen and (max-width: 600px) {
-    .zoom-description h4 {
+    .zoom-description h6 {
         font-size: small;
         margin: 0%;
     }

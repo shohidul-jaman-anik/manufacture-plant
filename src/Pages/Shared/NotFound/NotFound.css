@@ -1,0 +1,25 @@
+.sleeping {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 3%;
+}
+
+.descripiton {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.not-found-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    background-color: orange;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    width: 12%;
+    margin: 0 auto;
+    margin-top: 5px;
+
+}
+

@@ -15,7 +15,7 @@ const Reviews = () => {
     // const [user, loading, error] = useAuthState(auth);
 
     return (
-        <div>
+        <div >
             <Typed className='review-title'
                 strings={[
                     'Clint Review '
@@ -26,7 +26,7 @@ const Reviews = () => {
             >
             </Typed>
 
-            <div className='review-container container'>
+            <div className='review-container container '>
 
                 {
                     reviews.map(studentReview => <Review

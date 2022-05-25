@@ -2,18 +2,22 @@
     {
       "_id": "1",
       "picture": "https://i.ibb.co/6mYNbWp/product2.jpg",
-      "PPU": 450,
+      "PPU": 200,
       "name": "Pipes",
       "gender": "female",
-      "Description":"Build your strength and get those extra few pounds in before the swimsuit season. Come train under expert personal trainers only at Power Zone."
+      "Description":"Thickness is 2.77.Unit Pipe Length . And it Unit Pipe Length is 3 meter, 6 meter, 9 meter, 18 meter.Outside Diameter is 21.3",
+      "MOQ": 250,
+      "Available-quantity": 15800
     },
     {
       "_id": "2",
       "picture": "https://i.ibb.co/54fvrVz/product3.jpg",
-      "PPU": 500,
+      "PPU": 450,
       "name": "Valves",
       "gender": "male",
-      "Description":"Lose extra weight and get in shape with expert personal trainers and top notch fitness equipments only at Mutants Gym, the best gym in Power Zone."
+      "Description":" Valve type IC gate valve SS304 screwed end.Material Stainless Steel .Size 15MM 1/2 TO 80MM . And it connection type is Screwed",
+      "MOQ": 200,
+      "Quantity": 9800
     },
     {
       "_id": "3",
@@ -21,30 +25,38 @@
       "PPU": 100,
       "name": "Flanges",
       "gender": "male",
-      "Description":"Power Zone helps develop the body's respiratory capabilities, workout with your friends while listening to trendy tune at one of the hottest gyms in Power Zone."
+      "Description":" Material Standard ASTM A105, ASTM A182, ANSI B16.5. Shape IS ROUND, And It is Material Stainless Steel ",
+      "MOQ": 125,
+      "Quantity": 10500
     },
     {
       "_id": "4",
-      "picture": "https://i.ibb.co/MPZg1L5/product4.jpg",
-      "PPU": 150,
-      "name": "Flanges",
+      "picture": "https://i.ibb.co/NTGCGCz/angle.jpg",
+      "PPU": 120,
+      "name": "Angle",
       "gender": "female",
-      "Description":"Work on your abs and core with state-of-the-art equipments specially brought to you by the best gym in Power Zone."
+      "Description":"Work on your abs and core with state-of-the-art equipments specially brought to you by the best gym in Power Zone.",
+      "MOQ": 300,
+      "Available-quantity": 13500
     },
     {
       "_id": "5",
       "picture": "https://i.ibb.co/6XpZDWr/51-Le-Vcm-Gj9-L-AC-SY355.jpg",
-      "PPU": 100,
+      "PPU": 10,
       "name": "Fitings",
       "gender": "male",
-      "Description":"Train with the best of the best in an intense workout session under the expert guidance of our personal trainers at Power Zone"
+      "Description":"Useage Chemical Fertilizer Pipe.It Shape is Round.It is Material Stainless. SteelSize 3/4 inch",
+      "MOQ": 450,
+      "Available-quantity": 12800
     },
     {
       "_id": "6",
       "picture": "https://i.ibb.co/0tcF8qh/2-500x500.jpg",
-      "PPU": 400,
+      "PPU": 100,
       "name": "Round Bars",
       "gender": "male",
-      "Description":"Yoga is a mind and body practice. Various styles of yoga combine physical postures, breathing techniques, and  relaxation."
+      "Description":" Single Piece Length 6 meter, 18 meter, 3 meter.It is Material Stainless.Shape Is Round.Size 36 mm to 93 mm are available",
+      "MOQ": 250,
+      "Available-quantity": 5800
     }
   ]
