@@ -4,6 +4,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
+import googleIcon from '../../../Assets/icon/google.svg'
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -34,7 +35,8 @@ const SocialLogin = () => {
                 {loginError}
                 <button
                     onClick={() => signInWithGoogle()}
-                    className="btn btn-outline">
+                    className="social-button">
+                        <img src={googleIcon} alt="" />
                     Login with Google
                 </button>
             </div>

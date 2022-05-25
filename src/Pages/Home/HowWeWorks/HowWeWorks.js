@@ -10,7 +10,7 @@ const HowWeWorks = () => {
     return (
         <div className='works-container'>
             <div className='text-center'>
-                <h1>How we works ?</h1>
+                <h1>How we <span className='name-style'>works</span>  ?</h1>
                 <p>We are your partner from prototyping to production and beyond</p>
             </div>
             <div>

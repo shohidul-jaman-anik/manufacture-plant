@@ -14,10 +14,11 @@
 
 .admit-btn {
     width: 100%;
-    color: rgb(235, 228, 228);
-    background-color: #ff4757;
+    color: black;
+    /* background-color: #ff4757; */
+    background-color: rgb(245, 169, 28);
     font-weight: 900;
-    
+    border: none;
 }
 
 @media only screen and (max-width: 576px) {

@@ -1,0 +1,11 @@
+.social-button {
+    background-color: white;
+    color: darkgray;
+    border: 1px solid orange;
+    padding: 0.7rem 1.9rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: 600;
+}

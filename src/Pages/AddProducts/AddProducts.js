@@ -3,15 +3,14 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
-import './AddReview.css'
 
-const AddReview = () => {
-    const [user] = useAuthState(auth);
-
+const AddProducts = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-    const onSubmit = data => {
+    const [user] = useAuthState(auth);
+    console.log(user)
+    const onSubmit = (data, event) => {
         console.log(data)
-        const url = `http://localhost:5000/reviews`
+        const url = `http://localhost:5000/products`
         fetch(url, {
             method: "POST",
             headers: {
@@ -21,56 +20,57 @@ const AddReview = () => {
         })
             .then(res => res.json())
             .then(result => {
+                toast('Item added')
+                console.log(result)
                 reset()
-                if (result) {
-                    toast('Comment Add Sucessfully')
-                }
+
             }
             )
     };
 
     return (
-
         <div>
-            <h1 className='comment-title'>Please Add  Review</h1>
+            <h1 className='comment-title'>Please Add  Products</h1>
             <div className='addreview'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input
                         className='mb-3  input input-bordered input-primary w-full max-w-xs '
                         value={user.displayName}
-                        {...register("name", { required: true, maxLength: 20 })}
+                        {...register("adminName", { required: true, maxLength: 25 })}
+                    /> <br />
+                    <input
+                        className='mb-3  input input-bordered input-primary w-full max-w-xs '
+                        value={user.email}
+                        {...register("email")}
                     /> <br />
 
                     <input
                         className='mb-3 input input-bordered input-primary w-full max-w-xs'
-                        placeholder='Enter Your ratings'
-                        type="number" {...register("ratings", {
-                            maxLength: {
-                                value: 5,
-                                message: 'Ratings not gratter then 5'
-                            }, required: {
-                                value: true,
-                                message: "Ratings is required"
-                            },
-                        })}
+                        placeholder='Enter Product Name'
+                        type="text" {...register("name")}
                     /><br />
-                    <label className="label">
-                        {errors.ratings?.type === 'required' && <span className="label-text-alt text-red-500">{errors.ratings.message}</span>}
-                        {errors.ratings?.type >'maxLength' && <span className="label-text-alt text-red-500">{errors.ratings.message}</span>}
-                    </label>
+                    <input
+                        className='mb-3 input input-bordered input-primary w-full max-w-xs'
+                        placeholder='Enter Price Per Unit'
+                        type="number" {...register("PPU")}
+                    /><br />
+                    <input
+                        className='mb-3 input input-bordered input-primary w-full max-w-xs'
+                        placeholder='Enter Minimum Order Quantity'
+                        type="number" {...register("MOQ")}
+                    /><br />
 
                     <input
-                        value={user.photoURL}
                         className='mb-3  input input-bordered input-primary w-full max-w-x'
-                        placeholder='User Img'
-                        type="text"{...register("userImg")}
+                        placeholder='Enter Img url'
+                        type="text"{...register("picture")}
                     /><br />
 
 
                     <textarea
-                        className='mb-2 rounded-md h-36 lg:w-96 text-center bg-slate-100 w-full max-w-xs input input-bordered input-primary'
-                        placeholder='Enter Your Comment'
-                        {...register("reviews",
+                        className='mb-2 rounded-md h-36 lg:w-96 text-center bg-slate-100 w-full max-w-xs'
+                        placeholder='Enter Product Details'
+                        {...register("Description",
                             {
                                 maxLength: 250, required: {
                                     value: true,
@@ -93,4 +93,4 @@ const AddReview = () => {
     );
 };
 
-export default AddReview;
+export default AddProducts;

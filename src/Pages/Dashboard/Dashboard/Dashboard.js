@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Link, Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
     return (
@@ -16,7 +16,8 @@ const Dashboard = () => {
                     {/* <!-- Sidebar content here --> */}
                     <li><Link to='/dashboard'>My Orders</Link></li>
                     <li><Link to="/dashboard/myReview">Add Review</Link></li>
-                    <li><Link to="dashboard/myProfile=">My Profile</Link></li>
+                    <li><Link to="/dashboard/myProfile">My Profile</Link></li>
+                    <li><Link to="/dashboard/users">All Users</Link></li>
                 </ul>
             </div>
         </div>

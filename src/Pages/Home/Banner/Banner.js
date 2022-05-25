@@ -13,9 +13,8 @@ const Banner = () => {
                         src="https://i.ibb.co/Jq3zYFc/Banner1.jpg"
                         alt="First slide"
                     />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <Carousel.Caption className='description'>
+                        <p>Manufacture Plant is a trusted brand by the farmers of more than 100+ countries globally.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -25,9 +24,8 @@ const Banner = () => {
                         alt="Second slide"
                     />
 
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <Carousel.Caption className='description'>
+                        <p>Today the name Agrovision has become a synonym to exceptional and impeccable manufacturer of agriculture machinery across the world.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -37,9 +35,8 @@ const Banner = () => {
                         alt="Third slide"
                     />
 
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    <Carousel.Caption className='description'>
+                        <p>We use best quality of raw material and sustainable engineering designs for manufacturing innovative implements of International standards. </p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

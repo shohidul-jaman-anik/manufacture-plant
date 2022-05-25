@@ -28,7 +28,7 @@ const SignUP = () => {
         if (user) {
             navigate(from, { replace: true });
         }
-    }, [token,from, navigate])
+    }, [token, from, navigate])
 
     // if (user) {
     //     navigate('/')
@@ -54,7 +54,7 @@ const SignUP = () => {
             </div>
             <form onSubmit={handleSubmit(onSubmit)} >
                 <h2 className="text-center font-bold">Sign Up</h2>
-                <div className="form-control  ">
+                <div className="lg:ml-16 form-control border-0 ">
                     <label className="label">
                         <span className="label-text">Name</span>
                     </label>
@@ -78,13 +78,13 @@ const SignUP = () => {
                     </label>
                 </div>
 
-                <div className="form-control  ">
+                <div className="lg:ml-16 form-control border-0 ">
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
                     <input
                         type="email"
-                        placeholder="Type here"
+                        placeholder="Enter your e-mail"
                         className="input input-bordered input-primary w-full max-w-xs "
                         // {...register("firstName", { required: true })}
                         {...register("email", {
@@ -105,13 +105,13 @@ const SignUP = () => {
                     </label>
                 </div>
 
-                <div className="form-control w-full max-w-xs">
+                <div className="lg:ml-16 form-control  border-0">
                     <label className="label">
                         <span className="label-text">Password</span>
                     </label>
                     <input
                         type="password"
-                        placeholder="Password"
+                        placeholder="Enter your password"
                         className="input input-bordered input-primary w-full max-w-xs"
                         // {...register("firstName", { required: true })}
                         {...register("password", {
@@ -131,9 +131,10 @@ const SignUP = () => {
 
                     </label>
                     {loginError}
-
-                    <input type="submit" className='btn text-white bg-gradient-to-r from-secondary to-primary' value="SignUp" />
                 </div>
+
+                <input type="submit" className='lg:ml-20 form-button ml-3' value="SignUp" />
+
                 <p className='text-center mt-2'><small>
                     Already have an account ?
                     <Link className='text-primary ml-2'

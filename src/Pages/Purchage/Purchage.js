@@ -112,9 +112,9 @@ const Purchage = () => {
                     className=' input input-bordered input-primary w-full max-w-xs ' placeholder='Enter Your Address'
                     type="text" {...register("address",
                         {
-                            maxLength: 15, required: {
+                             required: {
                                 value: true,
-                                message: "Number is required"
+                                message: "Address is required"
                             },
                         })}
                 /><br />

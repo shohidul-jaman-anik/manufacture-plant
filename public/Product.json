@@ -1,6 +1,5 @@
 [
     {
-      "_id": "1",
       "picture": "https://i.ibb.co/6mYNbWp/product2.jpg",
       "PPU": 200,
       "name": "Pipes",
@@ -10,7 +9,6 @@
       "Available-quantity": 15800
     },
     {
-      "_id": "2",
       "picture": "https://i.ibb.co/54fvrVz/product3.jpg",
       "PPU": 450,
       "name": "Valves",
@@ -20,7 +18,6 @@
       "Quantity": 9800
     },
     {
-      "_id": "3",
       "picture": "https://i.ibb.co/Cmg8pjF/product5.jpg",
       "PPU": 100,
       "name": "Flanges",
@@ -30,7 +27,6 @@
       "Quantity": 10500
     },
     {
-      "_id": "4",
       "picture": "https://i.ibb.co/NTGCGCz/angle.jpg",
       "PPU": 120,
       "name": "Angle",
@@ -40,7 +36,6 @@
       "Available-quantity": 13500
     },
     {
-      "_id": "5",
       "picture": "https://i.ibb.co/6XpZDWr/51-Le-Vcm-Gj9-L-AC-SY355.jpg",
       "PPU": 10,
       "name": "Fitings",
@@ -50,7 +45,6 @@
       "Available-quantity": 12800
     },
     {
-      "_id": "6",
       "picture": "https://i.ibb.co/0tcF8qh/2-500x500.jpg",
       "PPU": 100,
       "name": "Round Bars",

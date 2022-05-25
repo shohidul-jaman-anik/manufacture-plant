@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-
+import './Login.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
@@ -33,11 +33,11 @@ const Login = () => {
         }
     }, [user, from, navigate])
 
-    if (loading ||sending) {
+    if (loading || sending) {
         return <Loading></Loading>
     }
     let loginError;
-    if (error||ResetError) {
+    if (error || ResetError) {
         loginError = <p className='text-red-500'>{error?.message}</p>
     }
     const onSubmit = (data) => {
@@ -65,14 +65,14 @@ const Login = () => {
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} >
                     <h2 className="text-center">Login</h2>
-                    <div className="form-control  ">
+                    <div className="lg:ml-16 form-control border-0">
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
                         <input
                             name='email'
                             type="email"
-                            placeholder="Type here"
+                            placeholder="Enter your Email"
                             className="input input-bordered input-primary w-full max-w-xs "
                             // {...register("firstName", { required: true })}
                             {...register("email", {
@@ -93,13 +93,13 @@ const Login = () => {
                         </label>
                     </div>
 
-                    <div className="form-control w-full max-w-xs">
+                    <div className="lg:ml-16 form-control  border-0">
                         <label className="label">
                             <span className="label-text">Password</span>
                         </label>
                         <input
                             type="password"
-                            placeholder="Password"
+                            placeholder="Enter your password"
                             className="input input-bordered input-primary w-full max-w-xs"
                             // {...register("firstName", { required: true })}
                             {...register("password", {
@@ -119,9 +119,9 @@ const Login = () => {
 
                         </label>
                         {loginError}
-
-                        <input type="submit" className='btn text-white bg-gradient-to-r from-secondary to-primary' value="Login" />
                     </div>
+
+                    <input type="submit" className='lg:ml-20 ml-3 form-button text-white ' value="Login" />
                     <p className='text-center mt-2'><small>
                         New To Doctor  Portal ?
                         <Link className='text-primary ml-2'
@@ -129,7 +129,7 @@ const Login = () => {
                         </Link></small>
                     </p>
 
-                    <p>Forget Password ? <span onClick={handleResetPass}>Reset Password</span></p>
+                    <p className='text-center'>Forget Password ? <span onClick={handleResetPass}>Reset Password</span></p>
 
                     <SocialLogin></SocialLogin>
                 </form>
