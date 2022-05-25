@@ -23,6 +23,7 @@ import AddProducts from './Pages/AddProducts/AddProducts';
 import ManageProducts from './Pages/ManageProducts/ManageProducts';
 import AllUsers from './Pages/Dashboard/AllUsers/AllUsers';
 import MyProfile from './Pages/Dashboard/MyProfile/MyProfile';
+import RequireAdmin from './Pages/Other/RequireAdmin/RequireAdmin';
 
 
 function App() {
@@ -62,7 +63,7 @@ function App() {
           </RequireAuth>}>
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path='myReview' element={<MyReview></MyReview>}></Route>
-          <Route path='users' element={<AllUsers></AllUsers>}></Route>
+          <Route path='users' element={<RequireAdmin><AllUsers></AllUsers></RequireAdmin>}></Route>
           <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
 
         </Route>

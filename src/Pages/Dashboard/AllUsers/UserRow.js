@@ -7,10 +7,17 @@ const UserRow = ({ user }) => {
         fetch(`http://localhost:5000/user/admin/${email}`, {
             method: 'PUT',
         })
-            .then(res => res.json())
+            .then(res => {
+                if (res.status === 403) {
+                    toast.error('Failed to make an admin')
+                }
+                return res.json()
+            })
             .then(data => {
-                console.log(data)
-                toast.success('Sucessfully made an admin')
+                if (data.modifiedCount > 0) {
+                    console.log(data)
+                    toast.success('Sucessfully made an admin')
+                }
             })
     }
     return (
