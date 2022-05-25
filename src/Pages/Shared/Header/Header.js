@@ -13,17 +13,6 @@ const Header = () => {
         signOut(auth);
         localStorage.removeItem('accessToken')
     };
-    const menuItems = <>
-        <li className='ml-24'><Link to="/" >Home</Link></li>
-        <li><Link to="/" >Appointment</Link></li>
-        <li><Link to="/" >Review</Link></li>
-        <li><Link to="/whyUs" >About Us</Link></li>
-
-        <li>{user ?
-            <button onClick={logout} className="btn btn-ghost">Log Out</button>
-            : <Link to="/login" >Login</Link>}
-        </li>
-    </>
     return (
         <Navbar className='navStyle' collapseOnSelect expand="lg" bg="dark" variant="dark" sticky='top'  >
             <Container >
@@ -32,11 +21,9 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto ">
-                        <Nav.Link as={Link} to='/addProducts' href=""  >Add Product</Nav.Link>
-                        <Nav.Link as={Link} to='/manageProducts' href=""  >Manage Products</Nav.Link>
                         <Nav.Link as={Link} to='/blog' >Blog</Nav.Link>
                         <Nav.Link as={Link} to='/dashboard' >Dashboard</Nav.Link>
-                        
+
                         <NavDropdown title="About Us" id="collasible-nav-dropdown">
                             <NavDropdown.Item as={Link} to='/whyUs'>Why Choose Us</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

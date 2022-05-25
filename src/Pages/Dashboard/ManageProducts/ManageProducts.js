@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flip } from 'react-reveal';
-import useProducts from '../Shared/Hook/useProduct/useProducts';
 import Typed from 'react-typed';
+import useProducts from '../../Shared/Hook/useProduct/useProducts';
 import './ManageProducts.css'
 
 const ManageProducts = () => {
@@ -10,7 +10,7 @@ const ManageProducts = () => {
         const proceed = window.confirm('Are you sure ?')
 
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`
+            const url = `https://calm-everglades-95109.herokuapp.com/products/${id}`
             fetch(url, {
                 method: "Delete"
             })

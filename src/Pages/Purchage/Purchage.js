@@ -26,7 +26,7 @@ const Purchage = () => {
         console.log(MOQ)
         const update = { MOQ, MOQDecrese }
         const url = `
-        http://localhost:5000/products/${productsId}`
+        https://calm-everglades-95109.herokuapp.com/products/${productsId}`
         fetch(url, {
             method: "PUT",
             headers: {
@@ -44,7 +44,7 @@ const Purchage = () => {
 
 
         //  Post Method
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://calm-everglades-95109.herokuapp.com/orders', data)
             .then(response => {
                 const data = response.data
                 console.log(data)
@@ -112,7 +112,7 @@ const Purchage = () => {
                     className=' input input-bordered input-primary w-full max-w-xs ' placeholder='Enter Your Address'
                     type="text" {...register("address",
                         {
-                             required: {
+                            required: {
                                 value: true,
                                 message: "Address is required"
                             },
@@ -138,6 +138,7 @@ const Purchage = () => {
 
                 <input
                     className='mb-3  input input-bordered input-primary w-full max-w-xs ' placeholder='Update Quantity (+ , -)'
+
                     type="number" {...register("MOQ", { min: MinOQ, max: AvlOQ })}
                 /> <br />
                 {errors.number && (

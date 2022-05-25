@@ -11,7 +11,7 @@ const AddReview = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/reviews`
+        const url = `https://calm-everglades-95109.herokuapp.com/reviews`
         fetch(url, {
             method: "POST",
             headers: {
@@ -56,7 +56,7 @@ const AddReview = () => {
                     /><br />
                     <label className="label">
                         {errors.ratings?.type === 'required' && <span className="label-text-alt text-red-500">{errors.ratings.message}</span>}
-                        {errors.ratings?.type >'maxLength' && <span className="label-text-alt text-red-500">{errors.ratings.message}</span>}
+                        {errors.ratings?.type > 'maxLength' && <span className="label-text-alt text-red-500">{errors.ratings.message}</span>}
                     </label>
 
                     <input
