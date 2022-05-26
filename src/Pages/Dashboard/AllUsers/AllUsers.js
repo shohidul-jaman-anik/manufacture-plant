@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useQuery, QueryClient, QueryClientProvider, } from 'react-query';
+// import { useQuery, QueryClient, QueryClientProvider, } from 'react-query';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import UserRow from './UserRow';
 
 const AllUsers = () => {
-    // const { data: users ,isLoading} = useQuery( 'users',() => fetch('https://calm-everglades-95109.herokuapp.com/user')
+    // const { data: users ,isLoading} = useQuery( 'users',() => fetch('http://localhost:5000/user')
     // .then(res => res.json()))
     // if(isLoading){
     //     return <Loading></Loading>
@@ -16,7 +16,7 @@ const AllUsers = () => {
     const [user, loading] = useAuthState(auth);
     useEffect(() => {
         if (user) {
-            fetch('https://calm-everglades-95109.herokuapp.com/user')
+            fetch('http://localhost:5000/user')
                 .then(res => res.json())
                 .then(data => setUsers(data))
         }

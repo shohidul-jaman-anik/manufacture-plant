@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
-import auth from '../../../firebase.init';
+import auth from '../../firebase.init';
 
 const AddProducts = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -78,7 +78,7 @@ const AddProducts = () => {
                             })}
                     /><br />
                     <label className="label">
-                        {errors.reviews?.type === 'required' && <span className="label-text-alt text-red-500">{errors.Description.message}</span>}
+                        {errors.reviews?.type === 'required' && <span className="label-text-alt text-red-500">{errors.reviews.message}</span>}
                     </label>
 
                     <input

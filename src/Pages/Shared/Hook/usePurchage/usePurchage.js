@@ -5,7 +5,7 @@ const usePurchage = productsId => {
 
     const [product, setProduct] = useState([])
     useEffect(() => {
-        const url = (`https://calm-everglades-95109.herokuapp.com/products/${productsId}`)
+        const url = (`http://localhost:5000/products/${productsId}`)
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))

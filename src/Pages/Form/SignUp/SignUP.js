@@ -48,6 +48,7 @@ const SignUP = () => {
         await updateProfile({ displayName: data.name });
         console.log(data)
     }
+    
     return (
         <div className='loginContainer'>
 

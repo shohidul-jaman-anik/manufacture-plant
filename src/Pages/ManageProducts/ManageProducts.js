@@ -1,7 +1,7 @@
 import React from 'react';
 import { Flip } from 'react-reveal';
+import useProducts from '../Shared/Hook/useProduct/useProducts';
 import Typed from 'react-typed';
-import useProducts from '../../Shared/Hook/useProduct/useProducts';
 import './ManageProducts.css'
 
 const ManageProducts = () => {

@@ -27,6 +27,8 @@
     "react-toastify": "^9.0.1",
     "react-typed": "^1.2.0",
     "slick-carousel": "^1.8.1",
+    "swiper": "^8.1.6",
+    "tw-elements": "^1.0.0-alpha12",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

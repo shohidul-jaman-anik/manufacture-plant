@@ -24,6 +24,7 @@ import MyProfile from './Pages/Dashboard/MyProfile/MyProfile';
 import RequireAdmin from './Pages/Other/RequireAdmin/RequireAdmin';
 import AddProducts from './Pages/Dashboard/AddProducts/AddProducts';
 import ManageProducts from './Pages/Dashboard/ManageProducts/ManageProducts';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
 
         </Route>
 
+        <Route path='/myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/blog' element={<Blogs></Blogs>}></Route>
         <Route path='/whyUs' element={<WhyChooseUs></WhyChooseUs>}></Route>
 
