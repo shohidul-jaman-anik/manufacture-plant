@@ -6,7 +6,11 @@ import Loading from '../../Shared/Loading/Loading';
 import UserRow from './UserRow';
 
 const AllUsers = () => {
-    
+    // const { data: users ,isLoading} = useQuery( 'users',() => fetch('https://calm-everglades-95109.herokuapp.com/user')
+    // .then(res => res.json()))
+    // if(isLoading){
+    //     return <Loading></Loading>
+    // }
 
     const [users, setUsers] = useState([])
     const [user, loading] = useAuthState(auth);
