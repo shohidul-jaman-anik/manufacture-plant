@@ -11,7 +11,7 @@ const AddReview = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data)
-        const url = `https://calm-everglades-95109.herokuapp.com/dashboard/reviews`
+        const url = `https://calm-everglades-95109.herokuapp.com/reviews`
         fetch(url, {
             method: "POST",
             headers: {
@@ -28,6 +28,7 @@ const AddReview = () => {
             }
             )
     };
+    
 
     return (
 
