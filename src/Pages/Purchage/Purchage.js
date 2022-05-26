@@ -136,7 +136,7 @@ const Purchage = () => {
                 </label>
 
                 <input
-                    value={product.MOQ}
+                    defaultValue={product.MOQ}
                     className='mb-3  input input-bordered input-primary w-full max-w-xs ' placeholder='Update Quantity (+ , -)'
 
                     type="number" {...register("MOQ", { min: MinOQ, max: AvlOQ })}

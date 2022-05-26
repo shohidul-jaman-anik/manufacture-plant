@@ -1,7 +1,6 @@
 import React from 'react';
 import MyProjects from './MyProjects';
-// import myPic from '../../assets/Rana photo (1).JPG';
-// import MyProjects from './MyProjects/MyProjects';
+import myPic from '../../Assets/myProfile/myImg.jpg';
 
 
 
@@ -11,7 +10,7 @@ const MyPortfolio = () => {
         <div>
             <div class="avatar online lg:mx-96 mx-20 mt-8">
                 <div class="w-52 rounded-full text-center">
-                    {/* <img src={myPic} alt='' /> */}
+                    <img src={myPic} alt='' />
                 </div>
             </div>
             <div className='lg:flex'>

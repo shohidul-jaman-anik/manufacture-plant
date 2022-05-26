@@ -32,19 +32,19 @@ const MyProfile = () => {
 
     return (
         <div>
-            <div class="flex flex-col  w-full lg:flex-row">
-                <div class="grid flex-grow card bg-base-300  place-items-center ">
-                    <img className='h-24 rounded-full' src={user.photoURL} alt="" />
+            <div class="flex flex-col w-full lg:flex-row">
+                <div class="grid flex-grow card bg-base-300 rounded-box place-items-center">
+                    <img className='h-48 rounded-full' src={user?.photoURL} alt="" />
                 </div>
                 <div class="divider divider-horizontal">OR</div>
-                <div class="grid flex-grow card  place-items-center border-0"><form onSubmit={handleSubmit(onSubmit)} >
+                <div class="grid flex-grow card place-items-center"><form onSubmit={handleSubmit(onSubmit)} >
                     <h2 className="text-center font-bold">Update Your Profile</h2>
                     <div className="lg:ml-16 form-control border-0 ">
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
                         <input
-                            value={user.displayName}
+                            defaultValue={user.displayName}
                             type="text"
                             placeholder="Enter Your Name"
                             className="input input-bordered input-primary w-full max-w-xs "
@@ -67,9 +67,10 @@ const MyProfile = () => {
                             <span className="label-text">Email</span>
                         </label>
                         <input
+                            defaultValue={user.email}
                             type="email"
                             placeholder="Enter your e-mail"
-                            className="input input-bordered input-primary w-full max-w-xs "
+                            className="input input-bordered input-primary w-full max-w-xs"
                             // {...register("firstName", { required: true })}
                             {...register("email", {
                                 pattern: {
@@ -86,22 +87,22 @@ const MyProfile = () => {
 
                     <div>
                         <label className="label">
-                            <span className="label-text">Location</span>
+                            <span className="label-text lg:ml-20">Location</span>
                         </label>
                         <input
                             type="text"
                             placeholder="Enter your Location"
-                            className="input input-bordered input-primary w-full max-w-xs "
+                            className="input input-bordered input-primary max-w-xs lg:w-72 lg:ml-20"
                             {...register("location")}
                         />
                     </div>
 
                     <div>
                         <label className="label">
-                            <span className="label-text">LinkedIn profile link</span>
+                            <span className="label-text lg:ml-20">LinkedIn profile link</span>
                         </label>
                         <input
-                            className='mb-3  input input-bordered input-primary w-full max-w-x'
+                            className='mb-3  input input-bordered input-primary max-w-x  lg:w-72 lg:ml-20'
                             placeholder='LinkedIn Profile Link'
                             type="text"{...register("LinkedIn")}
                         /><br />
@@ -113,7 +114,7 @@ const MyProfile = () => {
                         </label>
                         <input
                             type="phone"
-                            placeholder="Enter your password"
+                            placeholder="Enter your phone"
                             className="input input-bordered input-primary w-full max-w-xs"
                             // {...register("firstName", { required: true })}
                             {...register("phone", {
@@ -125,12 +126,12 @@ const MyProfile = () => {
                             })}
                         />
                         <label className="label">
-                            {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
+                            {errors.phone?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.phone.message}</span>}
 
                         </label>
                     </div>
 
-                    <input type="submit" className='lg:ml-20 form-button ml-3' value="Save Change" />
+                    <input type="submit" className='form-button lg:ml-20 form-button ml-3' value="Save Change" />
                 </form>
                 </div>
             </div>

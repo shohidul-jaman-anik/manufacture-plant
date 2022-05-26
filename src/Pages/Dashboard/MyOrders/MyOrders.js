@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 
@@ -67,7 +68,11 @@ const MyOrders = () => {
                             <td>{product.address}</td>
                             <td>{product.number}</td>
                             <td onClick={() => handleDelete(product._id)}> ❌ </td>
-                            <td>💳</td>
+                            <td>
+                                {(product.PPU && !product.paid)}&&<Link to={`/dashboard/payment/${product._id}`}><button className='btn btn-sm'>💳</button></Link>
+                                {(product.PPU && product.paid)}&&<span className='text-success'>Paid</span>
+                            
+                            </td>
                         </tr>)}
                     </tbody>
                 </table>
