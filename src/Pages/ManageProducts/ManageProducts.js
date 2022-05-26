@@ -3,43 +3,43 @@ import { Flip } from 'react-reveal';
 import useProducts from '../Shared/Hook/useProduct/useProducts';
 import Typed from 'react-typed';
 import './ManageProducts.css'
-import usePurchage from '../Shared/Hook/usePurchage/usePurchage';
-import { useParams } from 'react-router-dom';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../firebase.init';
-import { useForm } from 'react-hook-form';
+// import usePurchage from '../Shared/Hook/usePurchage/usePurchage';
+// import { useParams } from 'react-router-dom';
+// import { useAuthState } from 'react-firebase-hooks/auth';
+// import auth from '../../firebase.init';
+// import { useForm } from 'react-hook-form';
 
 const ManageProducts = () => {
-    const { register, reset, handleSubmit, formState: { errors }, } = useForm();
-    const { productsId } = useParams()
-    const [user] = useAuthState(auth);
-    var [product1] = usePurchage(productsId)
+    // const { register, reset, handleSubmit, formState: { errors }, } = useForm();
+    // const { productsId } = useParams()
+    // const [user] = useAuthState(auth);
+    // var [product1] = usePurchage(productsId)
 
-    var AvlOQ = product1.Quantity
-    var MinOQ = product1.MOQ
+    // var AvlOQ = product1.Quantity
+    // var MinOQ = product1.MOQ
 
-    const onSubmit = (data) => {
-        console.log(data)
-        const MOQ = parseFloat(data?.MOQ) + parseFloat(product?.MOQ);
-        const MOQDecrese = parseFloat(product?.MOQ) - parseFloat(data?.MOQ);
-        console.log(MOQ)
-        const update = { MOQ, MOQDecrese }
-        const url = `
-        https://calm-everglades-95109.herokuapp.com/products/${productsId}`
-        fetch(url, {
-            method: "PUT",
-            headers: {
-                'content-type': "application/json"
-            },
-            body: JSON.stringify(update)
-        })
-            .then(res => res.json())
-            .then(result => {
-                console.log(result)
-                reset()
-            }
-            )
-        }
+    // const onSubmit = (data) => {
+    //     console.log(data)
+    //     const MOQ = parseFloat(data?.MOQ) + parseFloat(product?.MOQ);
+    //     const MOQDecrese = parseFloat(product?.MOQ) - parseFloat(data?.MOQ);
+    //     console.log(MOQ)
+    //     const update = { MOQ, MOQDecrese }
+    //     const url = `
+    //     https://calm-everglades-95109.herokuapp.com/products/${productsId}`
+    //     fetch(url, {
+    //         method: "PUT",
+    //         headers: {
+    //             'content-type': "application/json"
+    //         },
+    //         body: JSON.stringify(update)
+    //     })
+    //         .then(res => res.json())
+    //         .then(result => {
+    //             console.log(result)
+    //             reset()
+    //         }
+    //         )
+    //     }
 
 
 
@@ -100,7 +100,7 @@ const ManageProducts = () => {
                         </div>)
                     }
                 </div>
-                <div>
+                {/* <div>
                     <form className='lg:ml-80' onSubmit={handleSubmit(onSubmit)}>
 
                         <input
@@ -119,7 +119,7 @@ const ManageProducts = () => {
                             value="Order"
                         />
                     </form>
-                </div>
+                </div> */}
             </div>
         );
     };
