@@ -36,26 +36,26 @@ const MyPortfolio = () => {
                     </div>
                 </div>
                 <div className='lg:w-96 mr-20 mt-56'>
-                    <h1 className='text-primary text-center font-bold text-4xl'>Md Rana Hossain</h1>
-                    <h1 className='text-center text-xl'><span className='font-bold'>Email:-</span>rana286090@gmail.com</h1>
+                    <h1 className='text-primary text-center font-bold text-4xl'>Md Anik Hossain</h1>
+                    <h1 className='text-center text-xl'><span className='font-bold'>Email:-</span>anikh499@gmail.com</h1>
                     <h1 className='text-center text-xl mt-2'><span className='font-bold'>Educational Background:-<br /></span>
-                        <li>I'm studying in BBA 2nd year at KABI NAGRUL GOVT COLLEGE in Accounting Department</li>
+                        <li>I'm studying in BBA 2nd year at Gvt Shahid Suhrawardy College in Accounting Department</li>
                     </h1>
                     <div className='ml-12'>
                         <h1 className='text-primary font-bold text-xl'>My Projects:-</h1>
                         <li>
-                            <a target="blank" href="https://food-house-assignment.netlify.app/" class="text-blue-600 visited:text-purple-600 link-hover">
-                                Food House
+                            <a target="blank" href="https://splendorous-madeleine-52daa1.netlify.app/home">
+                                The Beer House
                             </a>
                         </li>
                         <li>
-                            <a target="blank" href="https://health-check-df55d.firebaseapp.com/" class="text-blue-600 visited:text-purple-600 link-hover">
-                                Health Coach
+                            <a target="blank" href="https://power-zone-d77bd.web.app/">
+                                Power Zone
                             </a>
                         </li>
                         <li>
-                            <a target="blank" href="https://star-furniture-63cf3.web.app/" class="text-blue-600 visited:text-purple-600 link-hover">
-                                Star Furniture
+                            <a target="blank" href="https://smart-gadget-warehouse.web.app/">
+                                Smart Gadget Warehouse
                             </a>
                         </li>
                     </div>

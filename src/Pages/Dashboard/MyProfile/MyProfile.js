@@ -11,7 +11,7 @@ const MyProfile = () => {
     const onSubmit = async data => {
 
         console.log(data)
-        const url = `http://localhost:5000/updateProfile`
+        const url = `https://calm-everglades-95109.herokuapp.com/updateProfile`
         fetch(url, {
             method: "POST",
             headers: {

@@ -6,7 +6,7 @@ import Loading from '../../Shared/Loading/Loading';
 import UserRow from './UserRow';
 
 const AllUsers = () => {
-    // const { data: users ,isLoading} = useQuery( 'users',() => fetch('http://localhost:5000/user')
+    // const { data: users ,isLoading} = useQuery( 'users',() => fetch('https://calm-everglades-95109.herokuapp.com/user')
     // .then(res => res.json()))
     // if(isLoading){
     //     return <Loading></Loading>
@@ -16,7 +16,7 @@ const AllUsers = () => {
     const [user, loading] = useAuthState(auth);
     useEffect(() => {
         if (user) {
-            fetch('http://localhost:5000/user')
+            fetch('https://calm-everglades-95109.herokuapp.com/user')
                 .then(res => res.json())
                 .then(data => setUsers(data))
         }

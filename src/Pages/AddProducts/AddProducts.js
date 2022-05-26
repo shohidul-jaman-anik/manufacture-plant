@@ -10,7 +10,7 @@ const AddProducts = () => {
     console.log(user)
     const onSubmit = (data, event) => {
         console.log(data)
-        const url = `http://localhost:5000/products`
+        const url = `https://calm-everglades-95109.herokuapp.com/products`
         fetch(url, {
             method: "POST",
             headers: {

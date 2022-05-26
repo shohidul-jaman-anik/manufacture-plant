@@ -20,31 +20,31 @@ const Purchage = () => {
     var MinOQ = product.MOQ
 
     const onSubmit = (data) => {
-        console.log(data)
-        const MOQ = parseFloat(data?.MOQ) + parseFloat(product?.MOQ);
-        const MOQDecrese = parseFloat(product?.MOQ) - parseFloat(data?.MOQ);
-        console.log(MOQ)
-        const update = { MOQ, MOQDecrese }
-        const url = `
-        http://localhost:5000/products/${productsId}`
-        fetch(url, {
-            method: "PUT",
-            headers: {
-                'content-type': "application/json"
-            },
-            body: JSON.stringify(update)
-        })
-            .then(res => res.json())
-            .then(result => {
-                console.log(result)
-                reset()
-            }
-            )
+        // console.log(data)
+        // const MOQ = parseFloat(data?.MOQ) + parseFloat(product?.MOQ);
+        // const MOQDecrese = parseFloat(product?.MOQ) - parseFloat(data?.MOQ);
+        // console.log(MOQ)
+        // const update = { MOQ, MOQDecrese }
+        // const url = `
+        // https://calm-everglades-95109.herokuapp.com/products/${productsId}`
+        // fetch(url, {
+        //     method: "PUT",
+        //     headers: {
+        //         'content-type': "application/json"
+        //     },
+        //     body: JSON.stringify(update)
+        // })
+        //     .then(res => res.json())
+        //     .then(result => {
+        //         console.log(result)
+        //         reset()
+        //     }
+        //     )
 
 
 
         //  Post Method
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://calm-everglades-95109.herokuapp.com/orders', data)
             .then(response => {
                 const data = response.data
                 console.log(data)

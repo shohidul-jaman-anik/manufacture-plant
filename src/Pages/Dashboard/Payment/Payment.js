@@ -1,13 +1,18 @@
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 // import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
+import CheckoutForm from '../CheckoutForm/CheckoutForm';
+
+const stripePromise = loadStripe('pk_test_51L3fcoEWKrisGJtYob8a6cDmb8cQDJiHQja8FYNhPE5Q6xzS9z2pQsXrSBkS7VHmeDkwxOwXHV3LSypVWBiypVRL00Dv21O1PU');
 
 const Payment = () => {
     const { id } = useParams()
-    // const url = `http://localhost:5000/booking/${id}`;
+    // const url = `https://calm-everglades-95109.herokuapp.com/booking/${id}`;
 
     // const { data: appointment, isLoading } = useQuery(['booking', id], () => fetch(url, {
     //     method: 'GET',
@@ -26,7 +31,7 @@ const Payment = () => {
     const [user, loading] = useAuthState(auth);
     useEffect(() => {
         if (user) {
-            const url = `http://localhost:5000/booking/${id}`
+            const url = `https://calm-everglades-95109.herokuapp.com/booking/${id}`
             fetch(url)
                 .then(res => res.json())
                 .then(data => setOrders(data))
@@ -48,11 +53,11 @@ const Payment = () => {
                 </div>
             </div>
             <div class="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
-                {/* <div class="card-body">
+                <div class="card-body">
                     <Elements stripe={stripePromise}>
-                        <CheckoutForm appointment={appointment} />
+                        <CheckoutForm order={order} />
                     </Elements>
-                </div> */}
+                </div>
             </div>
         </div>
     );
