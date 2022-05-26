@@ -12,18 +12,7 @@ const stripePromise = loadStripe('pk_test_51L3fcoEWKrisGJtYob8a6cDmb8cQDJiHQja8F
 
 const Payment = () => {
     const { id } = useParams()
-    // const url = `https://calm-everglades-95109.herokuapp.com/booking/${id}`;
-
-    // const { data: appointment, isLoading } = useQuery(['booking', id], () => fetch(url, {
-    //     method: 'GET',
-    //     headers: {
-    //         'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-    //     }
-    // }).then(res => res.json()));
-
-    // if (isLoading) {
-    //     return <Loading></Loading>
-    // }
+    
 
 
 
