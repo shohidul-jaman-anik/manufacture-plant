@@ -40,8 +40,6 @@ const MyOrders = () => {
         }
     }
 
-
-
     return (
         <div>
             <h3>Total Orders : {products.length}</h3>
@@ -50,9 +48,8 @@ const MyOrders = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Name</th>
-                            <th>Product</th>
-                            <th>MOQ</th>
+                            <th>Product Name</th>
+                            <th>Order Quantity</th>
                             <th>Address</th>
                             <th>Number</th>
                             <th>Delete Order</th>
@@ -62,14 +59,15 @@ const MyOrders = () => {
                     <tbody>
                         {products.map((product, index) => <tr>
                             <th>{index + 1}</th>
-                            <th>{product.name}</th>
-                            <td>{product.productName}</td>
+                            <td>{product?.productName}</td>
                             <td>{product.MOQ}</td>
                             <td>{product.address}</td>
                             <td>{product.number}</td>
                             <td onClick={() => handleDelete(product._id)}> ❌ </td>
                             <td>
-                                {(product.PPU && !product.paid)}&&<Link to={`/dashboard/payment/${product._id}`}><button className='btn btn-sm'>💳</button></Link>
+                                {(product.PPU && !product.paid)}&&
+                                <Link to={`/dashboard/payment/${product._id}`}><button className='btn btn-sm'>💳</button></Link>
+                                
                                 {(product.PPU && product.paid)}&&<span className='text-success'>Paid</span>
 
                             </td>

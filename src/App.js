@@ -14,18 +14,16 @@ import Header from './Pages/Shared/Header/Header';
 import Purchage from './Pages/Purchage/Purchage';
 import RequireAuth from './Pages/Other/RequireAuth/RequireAuth';
 import Blogs from './Pages/Blogs/Blogs';
-import AddReview from './Pages/AddReview/AddReview';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
-import MyReview from './Pages/Dashboard/MyReview/MyReview';
-import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import AllUsers from './Pages/Dashboard/AllUsers/AllUsers';
-import MyProfile from './Pages/Dashboard/MyProfile/MyProfile';
 import RequireAdmin from './Pages/Other/RequireAdmin/RequireAdmin';
 import AddProducts from './Pages/Dashboard/AddProducts/AddProducts';
 import ManageProducts from './Pages/Dashboard/ManageProducts/ManageProducts';
-import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 import Payment from './Pages/Dashboard/Payment/Payment';
+import AddReview from './Pages/Review/AddReview/AddReview';
+import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
+import MyProfile from './Pages/Dashboard/MyProfile/MyProfile';
 
 
 function App() {
@@ -44,26 +42,24 @@ function App() {
           </RequireAuth>}>
         </Route>
         <Route path='/addReview' element={
-          <RequireAuth>
-            <AddReview></AddReview>
-          </RequireAuth>}>
+          <AddReview></AddReview>
+        }>
         </Route>
 
         <Route path='dashboard' element={
           <RequireAuth>
             <Dashboard></Dashboard>
           </RequireAuth>}>
-          <Route index element={<MyOrders></MyOrders>}></Route>
-          <Route path='myReview' element={<MyReview></MyReview>}></Route>
+          
           <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='users' element={<RequireAdmin><AllUsers></AllUsers></RequireAdmin>}></Route>
           <Route path='addProducts' element={<RequireAdmin><AddProducts></AddProducts></RequireAdmin>}></Route>
           <Route path='manageProducts' element={<RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>}></Route>
-          <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
-
+          
         </Route>
 
-        <Route path='/myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+        <Route path='/myOrder' element={<MyOrders></MyOrders>}></Route>
+        <Route path='/myProfile' element={<MyProfile></MyProfile>}></Route>
         <Route path='/blog' element={<Blogs></Blogs>}></Route>
         <Route path='/whyUs' element={<WhyChooseUs></WhyChooseUs>}></Route>
 

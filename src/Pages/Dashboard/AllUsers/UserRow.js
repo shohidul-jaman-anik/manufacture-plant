@@ -23,7 +23,7 @@ const UserRow = ({ user }) => {
     return (
         <tr>
             <td>{email}</td>
-            <td>Remove User ❌</td>
+            {/* <td>Remove User ❌</td> */}
             <td>{role !== 'admin' && <button onClick={makeAdmin} class="btn btn-sm">Make Admin 👨‍✈️</button>}</td>
         </tr>
     );

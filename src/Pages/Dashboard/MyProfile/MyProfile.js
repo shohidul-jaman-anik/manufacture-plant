@@ -27,7 +27,6 @@ const MyProfile = () => {
                 }
             }
             )
-
     }
 
     return (

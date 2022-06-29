@@ -3,6 +3,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 // import { useQuery } from 'react-query';
+// 
 import { useParams } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
@@ -12,9 +13,10 @@ const stripePromise = loadStripe('pk_test_51L3fcoEWKrisGJtYob8a6cDmb8cQDJiHQja8F
 
 const Payment = () => {
     const { id } = useParams()
-    // const url = `https://calm-everglades-95109.herokuapp.com/booking/${id}`;
+    console.log(id)
+    // const url = `https://calm-everglades-95109.herokuapp.com/orders/${id}`;
 
-    // const { data: appointment, isLoading } = useQuery(['booking', id], () => fetch(url, {
+    // const { data: order, isLoading } = useQuery(['booking', id], () => fetch(url, {
     //     method: 'GET',
     //     headers: {
     //         'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -31,12 +33,12 @@ const Payment = () => {
     const [user, loading] = useAuthState(auth);
     useEffect(() => {
         if (user) {
-            const url = `https://calm-everglades-95109.herokuapp.com/booking/${id}`
+            const url = `https://calm-everglades-95109.herokuapp.com/orders/${id}`
             fetch(url)
                 .then(res => res.json())
                 .then(data => setOrders(data))
         }
-    }, [user])
+    }, [user,id])
 
     if (loading) {
         return <Loading></Loading>

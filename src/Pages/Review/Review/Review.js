@@ -1,8 +1,5 @@
 import React from 'react';
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 import './Review.css'
-// import Slider from "react-slick";
 
 const Review = ({ studentReview }) => {
 
@@ -13,14 +10,13 @@ const Review = ({ studentReview }) => {
                 <div className='student-info '>
                     <img src={studentReview.picture} alt="" />
                     <div className='review-main'>
-                        <h4>{studentReview.name}</h4>
-                        <h4 className='fs-6'>Ratings:{studentReview.ratings} </h4>
-
+                        <h1 className='text-2xl font-semibold'>{studentReview.name}</h1>
+                        <h1 className='fs-6 font-semibold'>Ratings : {studentReview.ratings}⭐</h1>
                     </div>
                 </div>
-                <p className='review'>{studentReview.reviews}</p>
+                <p className='text-start'>{studentReview.reviews}</p>
             </div>
-            
+          
         </div>
     );
 }

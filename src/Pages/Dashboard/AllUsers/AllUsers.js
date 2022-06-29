@@ -35,7 +35,7 @@ const AllUsers = () => {
                     <thead>
                         <tr>
                             <th>Email</th>
-                            <th>Delete User</th>
+                            {/* <th>Delete User</th> */}
                             <th>Make Admin</th>
                         </tr>
                     </thead>

@@ -4,11 +4,13 @@ import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import useAdmin from '../Hook/useAdmin/useAdmin';
 import './Header.css'
 
 
 const Header = () => {
     const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user)
     const logout = () => {
         signOut(auth);
         localStorage.removeItem('accessToken')
@@ -21,9 +23,11 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto ">
-                        <Nav.Link as={Link} to='/myPortfolio' >My Portfolio</Nav.Link>
+                        <Nav.Link as={Link} to='/myOrder' >My Order</Nav.Link>
+                        <Nav.Link as={Link} to='/addReview' >Add Review</Nav.Link>
+                        <Nav.Link as={Link} to='/MyProfile' >My Profile</Nav.Link>
                         <Nav.Link as={Link} to='/blog' >Blog</Nav.Link>
-                        <Nav.Link as={Link} to='/dashboard' >Dashboard</Nav.Link>
+                        {admin && <Nav.Link as={Link} to='/dashboard' >Dashboard</Nav.Link>}
 
                         <NavDropdown title="About Us" id="collasible-nav-dropdown">
                             <NavDropdown.Item as={Link} to='/whyUs'>Why Choose Us</NavDropdown.Item>

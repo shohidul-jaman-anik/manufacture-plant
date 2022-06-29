@@ -4,7 +4,6 @@ import BusinessSummary from '../BusinessSummary/BusinessSummary';
 import HowWeWorks from '../HowWeWorks/HowWeWorks';
 import OurMission from '../OurMission/OurMission';
 import Products from '../Products/Products';
-import Reviews from '../Review/Reviews/Reviews';
 import './Home.css';
 
 
@@ -16,7 +15,6 @@ const Home = () => {
             <Products></Products>
             <HowWeWorks></HowWeWorks>
             <BusinessSummary></BusinessSummary>
-            <Reviews></Reviews>
         </div>
     );
 };

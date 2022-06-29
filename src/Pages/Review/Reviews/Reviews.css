@@ -1,11 +1,4 @@
-.review-container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr) ;
-    gap: 1%;
-    grid-row-gap: 3%;
-    margin-bottom: 400px;
-    margin-top: 1rem;
-}
+
 .review-title{
     color:  #ed563b;
     margin-top: 1rem;
@@ -19,7 +12,7 @@
  Services Responsive for Mobile device 
  ------------------------------------*/
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
 
     .review-container{
         display: grid;
@@ -30,16 +23,16 @@
         margin-left: 30%;
     }
     
-}
+} */
 /*-----------------------------------
  Services Responsive for tab device 
  ------------------------------------*/
-@media only screen and (min-width: 576px) and (max-width: 960px) {
+/* @media only screen and (min-width: 576px) and (max-width: 960px) {
     .review-container{
      display: grid;
      grid-template-columns: repeat(2,1fr);
      
    }
 
-}
+} */
 

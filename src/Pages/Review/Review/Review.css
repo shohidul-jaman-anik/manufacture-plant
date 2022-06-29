@@ -1,29 +1,26 @@
 .student-info img {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 70px;
     border-radius: 50%;
     padding-right: 5px;
 }
-.student-info{
+
+.student-info {
     display: flex;
- 
+
 }
-.review{
-    color: rgb(139, 134, 134);
-    font-size: small;
-}
-.review-section{
+
+.review-section {
     padding: 5px;
-    border: 1px solid gray;
-    border-radius: 15px;
+    width: 100%;
 }
 
 
 /*-----------------------------------
  Services Responsive for tab device 
  ------------------------------------*/
- @media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     .review-main h4{
         font-size: small;
     }
-}
+} */
