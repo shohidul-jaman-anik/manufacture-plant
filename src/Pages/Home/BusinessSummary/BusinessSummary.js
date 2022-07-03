@@ -23,7 +23,9 @@ const BusinessSummary = () => {
                                     <div className="col-12">
                                         <div className="count-area-content percentage">
                                             <div className="count-digit">
-                                                <CountUp end={100} delay={2} duration={5} />
+                                                <CountUp end={100} delay={3} duration={18} 
+                                                countUpRef
+                                                />
                                             </div>
                                             <div className="count-title">Succesed Deals <span className='emoji'>🤝</span></div>
                                         </div>
@@ -31,7 +33,7 @@ const BusinessSummary = () => {
                                     <div className="col-12">
                                         <div className="count-area-content">
                                             <div className="count-digit">
-                                            <CountUp end={102} delay={1} duration={5} />
+                                            <CountUp end={102} delay={1} duration={18} />
                                             </div>
                                             <div className="count-title"><small>Buyer in the world</small><span className='emoji'>🌍</span></div>
                                         </div>
@@ -43,7 +45,7 @@ const BusinessSummary = () => {
                                     <div className="col-12">
                                         <div className="count-area-content new-students">
                                             <div className="count-digit">
-                                                <CountUp end={2178} delay={1} duration={7} />
+                                                <CountUp end={2178} delay={1} duration={22} />
                                                 </div>
                                             <div className="count-title">Happy Clints <span className='emoji'>😊</span></div>
                                         </div>
@@ -51,7 +53,7 @@ const BusinessSummary = () => {
                                     <div className="col-12">
                                         <div className="count-area-content">
                                             <div className="count-digit">
-                                                <CountUp end={25} delay={1} duration={3} />
+                                                <CountUp end={25} delay={1} duration={18} />
                                                 </div>
                                             <div className="count-title">Wining Awards <span className='emoji'>🏆</span></div>
                                         </div>

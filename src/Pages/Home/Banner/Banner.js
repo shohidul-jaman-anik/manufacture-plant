@@ -1,5 +1,6 @@
 import { Carousel } from 'react-bootstrap';
 import React from 'react';
+import banner2 from '../../../Assets/Banner/Banner2.jpg'
 import './Banner.css'
 
 
@@ -20,7 +21,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://i.ibb.co/Jq3zYFc/Banner1.jpg"
+                        src={banner2}
                         alt="Second slide"
                     />
 

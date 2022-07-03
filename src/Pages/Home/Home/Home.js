@@ -1,4 +1,5 @@
 import React from 'react';
+import WhyChooseUs from '../../About/WhyChooseUs/WhyChooseUs';
 import Banner from '../Banner/Banner';
 import BusinessSummary from '../BusinessSummary/BusinessSummary';
 import HowWeWorks from '../HowWeWorks/HowWeWorks';
@@ -15,6 +16,7 @@ const Home = () => {
             <Products></Products>
             <HowWeWorks></HowWeWorks>
             <BusinessSummary></BusinessSummary>
+            <WhyChooseUs></WhyChooseUs>
         </div>
     );
 };

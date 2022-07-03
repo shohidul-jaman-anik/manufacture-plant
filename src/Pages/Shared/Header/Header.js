@@ -34,7 +34,10 @@ const Header = () => {
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                         </NavDropdown>
                         <label for="my-drawer-2" class="drawer-button btn btn-primary drawer-button lg:hidden ">Open drawer</label>
+
+                        
                     </Nav>
+                    
                     <Nav>
 
                         {user ? (
