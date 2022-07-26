@@ -26,7 +26,7 @@ const Purchage = () => {
         // console.log(MOQ)
         // const update = { MOQ, MOQDecrese }
         // const url = `
-        // https://calm-everglades-95109.herokuapp.com/products/${productsId}`
+        // https://infinite-citadel-42199.herokuapp.com/products/${productsId}`
         // fetch(url, {
         //     method: "PUT",
         //     headers: {
@@ -44,7 +44,7 @@ const Purchage = () => {
 
 
         //  Post Method
-        axios.post('https://calm-everglades-95109.herokuapp.com/orders', data)
+        axios.post('https://infinite-citadel-42199.herokuapp.com/orders', data)
             .then(response => {
                 const data = response.data
                 console.log(data)

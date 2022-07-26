@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [user, loading] = useAuthState(auth);
     useEffect(() => {
         if (user) {
-            const url = `https://calm-everglades-95109.herokuapp.com/orders?email=${user.email}`
+            const url = `https://infinite-citadel-42199.herokuapp.com/orders?email=${user.email}`
             console.log(url)
             fetch(url)
                 .then(res => res.json())
@@ -25,7 +25,7 @@ const MyOrders = () => {
         const proceed = window.confirm('Are you sure ?')
 
         if (proceed) {
-            const url = `https://calm-everglades-95109.herokuapp.com/orders/${id}`
+            const url = `https://infinite-citadel-42199.herokuapp.com/orders/${id}`
             console.log(url)
             fetch(url, {
                 method: "DELETE",
@@ -67,7 +67,7 @@ const MyOrders = () => {
                             <td>
                                 {(product.PPU && !product.paid)}&&
                                 <Link to={`/dashboard/payment/${product._id}`}><button className='btn btn-sm'>💳</button></Link>
-                                
+
                                 {(product.PPU && product.paid)}&&<span className='text-success'>Paid</span>
 
                             </td>

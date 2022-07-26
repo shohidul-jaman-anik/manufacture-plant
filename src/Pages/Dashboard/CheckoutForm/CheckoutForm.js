@@ -83,7 +83,7 @@ export default CheckoutForm;
 //     const {PPU,name,MOQ } = order
 
 //     useEffect(() => {
-//         fetch('https://calm-everglades-95109.herokuapp.com/create-payment-intent', {
+//         fetch('https://infinite-citadel-42199.herokuapp.com/create-payment-intent', {
 //             method: 'POST',
 //             headers: {
 //                 'content-type': 'application/json',

@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const UserRow = ({ user }) => {
     const { email, role } = user
     const makeAdmin = () => {
-        fetch(`https://calm-everglades-95109.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://infinite-citadel-42199.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
         })
             .then(res => {

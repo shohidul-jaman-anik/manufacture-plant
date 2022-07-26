@@ -11,7 +11,7 @@ const Reviews = () => {
     //         .then(data => setReviews(data))
     // }, [reviews]);
 
-    const { data: reviews, isLoading, error, data } = useQuery("review", () => fetch('https://calm-everglades-95109.herokuapp.com/reviews')
+    const { data: reviews, isLoading, error, data } = useQuery("review", () => fetch('https://infinite-citadel-42199.herokuapp.com/reviews')
         .then(res => res.json()))
 
     if (isLoading) {

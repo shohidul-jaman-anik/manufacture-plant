@@ -27,7 +27,7 @@ const Products = () => {
 
                 <div className='products-container'>
                     {
-                        product.map(service => <Product
+                        product.slice(0,6).map(service => <Product
                             key={service._id}
                             service={service}
                         ></Product>)

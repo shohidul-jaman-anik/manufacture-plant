@@ -19,7 +19,7 @@ const AddReview = () => {
 
     const onSubmit = data => {
         console.log("form result", data)
-        const url = `https://calm-everglades-95109.herokuapp.com/reviews`
+        const url = `https://infinite-citadel-42199.herokuapp.com/reviews`
         fetch(url, {
             method: "POST",
             headers: {

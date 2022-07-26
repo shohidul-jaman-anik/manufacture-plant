@@ -21,7 +21,7 @@ const Product = ({ service }) => {
                 <img src={picture} alt="" />
                 <h2>Name : {name}</h2>
                 <h5>Price : ${PPU}<span className='text-xs'>/Unit</span></h5>
-                <h5>Available Quantity : {Quantity}</h5>
+                <h5>Available Quantity: {Quantity}</h5>
                 <h5>MOQ:{MOQ} <span className='text-xs'>/Minimum order quantity</span></h5>
                 <Flip right cascade><p> {Description}</p></Flip>
                 <button onClick={() => nevigateServiceDetail(_id)} className='btn btn-dark admit-btn '>

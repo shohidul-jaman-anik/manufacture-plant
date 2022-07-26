@@ -10,7 +10,7 @@ const ManageProducts = () => {
         const proceed = window.confirm('Are you sure ?')
 
         if (proceed) {
-            const url = `https://calm-everglades-95109.herokuapp.com/products/${id}`
+            const url = `https://infinite-citadel-42199.herokuapp.com/products/${id}`
             fetch(url, {
                 method: "Delete"
             })
