@@ -7,6 +7,7 @@ import Loading from '../../Shared/Loading/Loading';
 const MyOrders = () => {
     const [products, setProducts] = useState([])
     const [user, loading] = useAuthState(auth);
+    
     useEffect(() => {
         if (user) {
             const url = `https://infinite-citadel-42199.herokuapp.com/orders?email=${user.email}`

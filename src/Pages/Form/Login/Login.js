@@ -9,6 +9,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 import loginImg from '../../../Assets/form-illustrator/Sign in-pana.svg'
 import { useForm } from 'react-hook-form';
+import useToken from '../../Shared/Hook/useToken/useToken';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -26,6 +27,8 @@ const Login = () => {
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
+
+    const [token]=useToken(user)
 
     useEffect(() => {
         if (user) {

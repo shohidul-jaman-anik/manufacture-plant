@@ -33,7 +33,7 @@
       "gender": "female",
       "Description":"Work on your abs and core with state-of-the-art equipments specially brought to you by the best gym in Power Zone.",
       "MOQ": 300,
-      "Available-quantity": 13500
+      "Quantity": 13500
     },
     {
       "picture": "https://i.ibb.co/6XpZDWr/51-Le-Vcm-Gj9-L-AC-SY355.jpg",
@@ -42,7 +42,7 @@
       "gender": "male",
       "Description":"Useage Chemical Fertilizer Pipe.It Shape is Round.It is Material Stainless. SteelSize 3/4 inch",
       "MOQ": 450,
-      "Available-quantity": 12800
+      "Quantity": 12800
     },
     {
       "picture": "https://i.ibb.co/0tcF8qh/2-500x500.jpg",
@@ -51,6 +51,6 @@
       "gender": "male",
       "Description":" Single Piece Length 6 meter, 18 meter, 3 meter.It is Material Stainless.Shape Is Round.Size 36 mm to 93 mm are available",
       "MOQ": 250,
-      "Available-quantity": 5800
+      "Quantity": 5800
     }
   ]

@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import googleIcon from '../../../Assets/icon/google.svg'
+import useToken from '../../Shared/Hook/useToken/useToken';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -12,7 +13,7 @@ const SocialLogin = () => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    // const [token] = useToken(user)
+    const [token] = useToken(user)
 
     useEffect(() => {
         if (user) {
