@@ -1,8 +1,8 @@
 import React from 'react';
-import './Reviews.css';
-import Review from '../Review/Review';
-import { useQuery } from 'react-query'
+import { useQuery } from 'react-query';
 import Loading from '../../Shared/Loading/Loading';
+import Review from '../Review/Review';
+import './Reviews.css';
 const Reviews = () => {
     // const [reviews, setReviews] = useState([])
     // useEffect(() => {
@@ -11,7 +11,7 @@ const Reviews = () => {
     //         .then(data => setReviews(data))
     // }, [reviews]);
 
-    const { data: reviews, isLoading, error, data } = useQuery("review", () => fetch('https://infinite-citadel-42199.herokuapp.com/reviews')
+    const { data: reviews, isLoading, error, data } = useQuery("review", () => fetch('https://manufacture-plant-server.vercel.app/reviews')
         .then(res => res.json()))
 
     if (isLoading) {

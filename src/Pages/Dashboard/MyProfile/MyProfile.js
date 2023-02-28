@@ -11,7 +11,7 @@ const MyProfile = () => {
     const onSubmit = async data => {
 
         console.log(data)
-        const url = `https://infinite-citadel-42199.herokuapp.com/updateProfile`
+        const url = `https://manufacture-plant-server.vercel.app/updateProfile`
         fetch(url, {
             method: "POST",
             headers: {

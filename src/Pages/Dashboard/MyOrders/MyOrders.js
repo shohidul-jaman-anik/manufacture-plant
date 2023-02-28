@@ -7,10 +7,10 @@ import Loading from '../../Shared/Loading/Loading';
 const MyOrders = () => {
     const [products, setProducts] = useState([])
     const [user, loading] = useAuthState(auth);
-    
+
     useEffect(() => {
         if (user) {
-            const url = `https://infinite-citadel-42199.herokuapp.com/orders?email=${user.email}`
+            const url = `https://manufacture-plant-server.vercel.app/orders?email=${user.email}`
             console.log(url)
             fetch(url)
                 .then(res => res.json())
@@ -26,7 +26,7 @@ const MyOrders = () => {
         const proceed = window.confirm('Are you sure ?')
 
         if (proceed) {
-            const url = `https://infinite-citadel-42199.herokuapp.com/orders/${id}`
+            const url = `https://manufacture-plant-server.vercel.app/orders/${id}`
             console.log(url)
             fetch(url, {
                 method: "DELETE",

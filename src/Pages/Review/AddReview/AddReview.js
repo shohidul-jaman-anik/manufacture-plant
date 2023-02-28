@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import Reviews from '../Reviews/Reviews';
-import './AddReview.css'
+import './AddReview.css';
 
 const AddReview = () => {
     const [user, loading] = useAuthState(auth);
@@ -19,7 +19,7 @@ const AddReview = () => {
 
     const onSubmit = data => {
         console.log("form result", data)
-        const url = `https://infinite-citadel-42199.herokuapp.com/reviews`
+        const url = `https://manufacture-plant-server.vercel.app/reviews`
         fetch(url, {
             method: "POST",
             headers: {

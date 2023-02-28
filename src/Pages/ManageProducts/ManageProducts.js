@@ -1,8 +1,8 @@
 import React from 'react';
 import { Flip } from 'react-reveal';
-import useProducts from '../Shared/Hook/useProduct/useProducts';
 import Typed from 'react-typed';
-import './ManageProducts.css'
+import useProducts from '../Shared/Hook/useProduct/useProducts';
+import './ManageProducts.css';
 // import usePurchage from '../Shared/Hook/usePurchage/usePurchage';
 // import { useParams } from 'react-router-dom';
 // import { useAuthState } from 'react-firebase-hooks/auth';
@@ -25,7 +25,7 @@ const ManageProducts = () => {
     //     console.log(MOQ)
     //     const update = { MOQ, MOQDecrese }
     //     const url = `
-    //     https://infinite-citadel-42199.herokuapp.com/products/${productsId}`
+    //     https://manufacture-plant-server.vercel.app/products/${productsId}`
     //     fetch(url, {
     //         method: "PUT",
     //         headers: {
@@ -49,7 +49,7 @@ const ManageProducts = () => {
         const proceed = window.confirm('Are you sure ?')
 
         if (proceed) {
-            const url = `https://infinite-citadel-42199.herokuapp.com/products/${id}`
+            const url = `https://manufacture-plant-server.vercel.app/products/${id}`
             fetch(url, {
                 method: "Delete"
             })

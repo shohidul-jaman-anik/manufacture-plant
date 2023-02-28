@@ -10,7 +10,7 @@ const AddProducts = () => {
     console.log(user)
     const onSubmit = (data, event) => {
         console.log(data)
-        const url = `https://infinite-citadel-42199.herokuapp.com/products`
+        const url = `https://manufacture-plant-server.vercel.app/products`
         fetch(url, {
             method: "POST",
             headers: {

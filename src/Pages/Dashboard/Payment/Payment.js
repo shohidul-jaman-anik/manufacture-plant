@@ -14,7 +14,7 @@ const stripePromise = loadStripe('pk_test_51L3fcoEWKrisGJtYob8a6cDmb8cQDJiHQja8F
 const Payment = () => {
     const { id } = useParams()
     console.log(id)
-    // const url = `https://infinite-citadel-42199.herokuapp.com/orders/${id}`;
+    // const url = `https://manufacture-plant-server.vercel.app/orders/${id}`;
 
     // const { data: order, isLoading } = useQuery(['booking', id], () => fetch(url, {
     //     method: 'GET',
@@ -33,7 +33,7 @@ const Payment = () => {
     const [user, loading] = useAuthState(auth);
     useEffect(() => {
         if (user) {
-            const url = `https://infinite-citadel-42199.herokuapp.com/orders/${id}`
+            const url = `https://manufacture-plant-server.vercel.app/orders/${id}`
             fetch(url)
                 .then(res => res.json())
                 .then(data => setOrders(data))

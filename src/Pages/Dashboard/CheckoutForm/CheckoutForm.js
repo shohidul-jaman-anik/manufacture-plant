@@ -1,4 +1,3 @@
-import { async } from '@firebase/util';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useState } from 'react';
 
@@ -83,7 +82,7 @@ export default CheckoutForm;
 //     const {PPU,name,MOQ } = order
 
 //     useEffect(() => {
-//         fetch('https://infinite-citadel-42199.herokuapp.com/create-payment-intent', {
+//         fetch('https://manufacture-plant-server.vercel.app/create-payment-intent', {
 //             method: 'POST',
 //             headers: {
 //                 'content-type': 'application/json',

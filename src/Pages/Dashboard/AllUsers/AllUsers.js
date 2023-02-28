@@ -6,7 +6,7 @@ import Loading from '../../Shared/Loading/Loading';
 import UserRow from './UserRow';
 
 const AllUsers = () => {
-    // const { data: users ,isLoading} = useQuery( 'users',() => fetch('https://infinite-citadel-42199.herokuapp.com/user')
+    // const { data: users ,isLoading} = useQuery( 'users',() => fetch('https://manufacture-plant-server.vercel.app/user')
     // .then(res => res.json()))
     // if(isLoading){
     //     return <Loading></Loading>
@@ -16,7 +16,7 @@ const AllUsers = () => {
     const [user, loading] = useAuthState(auth);
     useEffect(() => {
         if (user) {
-            fetch('https://infinite-citadel-42199.herokuapp.com/user')
+            fetch('https://manufacture-plant-server.vercel.app/user')
                 .then(res => res.json())
                 .then(data => setUsers(data))
         }

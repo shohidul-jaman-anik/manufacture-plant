@@ -2,7 +2,7 @@ import React from 'react';
 import { Flip } from 'react-reveal';
 import Typed from 'react-typed';
 import useProducts from '../../Shared/Hook/useProduct/useProducts';
-import './ManageProducts.css'
+import './ManageProducts.css';
 
 const ManageProducts = () => {
     const [product, setProduct] = useProducts()
@@ -10,7 +10,7 @@ const ManageProducts = () => {
         const proceed = window.confirm('Are you sure ?')
 
         if (proceed) {
-            const url = `https://infinite-citadel-42199.herokuapp.com/products/${id}`
+            const url = `https://manufacture-plant-server.vercel.app/products/${id}`
             fetch(url, {
                 method: "Delete"
             })

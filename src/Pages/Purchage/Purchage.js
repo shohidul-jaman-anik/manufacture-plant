@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import usePurchage from '../Shared/Hook/usePurchage/usePurchage';
-import './Purchage.css'
+import './Purchage.css';
 
 const Purchage = () => {
     const { productsId } = useParams()
@@ -26,7 +26,7 @@ const Purchage = () => {
         // console.log(MOQ)
         // const update = { MOQ, MOQDecrese }
         // const url = `
-        // https://infinite-citadel-42199.herokuapp.com/products/${productsId}`
+        // https://manufacture-plant-server.vercel.app/products/${productsId}`
         // fetch(url, {
         //     method: "PUT",
         //     headers: {
@@ -44,7 +44,7 @@ const Purchage = () => {
 
 
         //  Post Method
-        axios.post('https://infinite-citadel-42199.herokuapp.com/orders', data)
+        axios.post('https://manufacture-plant-server.vercel.app/orders', data)
             .then(response => {
                 const data = response.data
                 console.log(data)

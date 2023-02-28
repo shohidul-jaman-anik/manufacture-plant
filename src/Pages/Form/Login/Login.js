@@ -29,6 +29,7 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
 
     const [token]=useToken(user)
+    console.log("bal er token",token)
 
     useEffect(() => {
         if (user) {

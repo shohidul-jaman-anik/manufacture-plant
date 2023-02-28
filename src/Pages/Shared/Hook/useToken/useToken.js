@@ -1,7 +1,6 @@
 // import React, { useEffect, useState } from 'react';
 
-import { useState } from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // const useToken = user => {
 
@@ -11,7 +10,7 @@ import { useEffect } from "react";
 //         const email = user?.user?.email
 //         const currentUser = { email: email }
 //         if (email) {
-//             fetch(`https://infinite-citadel-42199.herokuapp.com/user/${email}`, {
+//             fetch(`https://manufacture-plant-server.vercel.app/user/${email}`, {
 //                 method: "PUT",
 //                 headers: {
 //                     "content-type": "application/json"
@@ -44,7 +43,8 @@ const useToken = user => {
         const email = { email: userEmail }
 
         if (userEmail) {
-            fetch(`https://infinite-citadel-42199.herokuapp.com/user/${email}`, {
+
+            fetch(`https://manufacture-plant-server.vercel.app/user/${email}`, {
                 method: "PUT",
                 headers: {
                     "content-type": "application/json"
@@ -52,13 +52,15 @@ const useToken = user => {
                 body: JSON.stringify(email)
 
             })
-                .then(res => {
-                    console.log(res)
-                    res.json()
-                })
+                .then(res => res.json())
                 .then(data => {
-                    setToken(data)
+
                     console.log("dataaaaaaaaa", data)
+
+                    const accessToken = data.token
+                    localStorage.setItem("accessToken", accessToken)
+                    setToken(accessToken)
+
                 })
         }
 
